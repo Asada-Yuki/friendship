@@ -15,6 +15,34 @@
             padding: 10px;
         }
     </style>
+
+    <SCRIPT>
+    function passWord() {
+      var testV = 1;
+      var pass1 = prompt('请输入您的密码，密码是"letmein"',' ');
+      while (testV < 3) {
+        if (!pass1) 
+          history.go(-1);
+        if (pass1.toLowerCase() == "letmein") {
+          alert('密码正确!');
+          window.open('www.wikihow.com');
+          break;
+        } 
+        testV+=1;
+        var pass1 = prompt('访问被拒绝 - 密码错误，请重试。密码是"letmein"','密码');
+      }
+      if (pass1.toLowerCase()!="password" & testV ==3) 
+        history.go(-1);
+      return " ";
+    }
+    </SCRIPT>
+    <CENTER>
+    <FORM>
+      <input type="button" value="进入受保护区域" onClick="passWord()">
+</FORM>
+</CENTER>
+
+    
 </head>
 <body>
     <table>
