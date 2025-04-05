@@ -55,6 +55,19 @@
     <meta name="twitter:url" content="https://friendship.yuki.art/">
     <meta name="twitter:description" content="Friendship Links">
     <meta name="twitter:image" content="https://friendship.yuki.art/assets/images/avatar.jpg">
+    <script>
+	// 禁用右键菜单
+	document.addEventListener('contextmenu', (e) => e.preventDefault());
+	
+	// 禁用文字选择
+	document.addEventListener('selectstart', (e) => e.preventDefault());
+	
+	// 禁用 Ctrl+C / Cmd+C
+	document.addEventListener('keydown', (e) => {
+	  if (e.ctrlKey && e.key === 'c') e.preventDefault();
+	});
+   </script>
+
 
 </head>
 
